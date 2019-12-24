@@ -440,18 +440,20 @@ compile_assets $2 2>>/dev/null
 build_theme_config
 
 theme_name="Redmond97 $Theme_name"
-rm -rf ~/.themes/"$theme_name"
-mkdir ~/.themes/"$theme_name"
-mv gtk-2.0 ~/.themes/"$theme_name"/
-mv gtk-3.0 ~/.themes/"$theme_name"/
-mv xfwm4 ~/.themes/"$theme_name"/
-mv metacity-1 ~/.themes/"$theme_name"/
-cp theme.conf ~/.themes/"$theme_name"/
-mv version ~/.themes/"$theme_name"/
-cp LICENSE ~/.themes/"$theme_name"/
-mv index.theme ~/.themes/"$theme_name"/
+data_dir="$XDG_DATA_HOME" || '~/.local/share'
+theme_dir="$data_dir"/themes
+rm -rf "$theme_dir"/"$theme_name"
+mkdir "$theme_dir"/"$theme_name"
+mv gtk-2.0 "$theme_dir"/"$theme_name"/
+mv gtk-3.0 "$theme_dir"/"$theme_name"/
+mv xfwm4 "$theme_dir"/"$theme_name"/
+mv metacity-1 "$theme_dir"/"$theme_name"/
+cp theme.conf "$theme_dir"/"$theme_name"/
+mv version "$theme_dir"/"$theme_name"/
+cp LICENSE "$theme_dir"/"$theme_name"/
+mv index.theme "$theme_dir"/"$theme_name"/
 echo "GTK2, GTK3 and XFWM4 themes configured and installed."
-echo "Theme '$theme_name' installed in ~/.themes/$theme_name. You may now select and use your theme."
+echo "Theme '$theme_name' installed in $theme_dir/$theme_name. You may now select and use your theme."
 }
 
 function cleanup {
