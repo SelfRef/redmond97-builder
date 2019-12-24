@@ -440,10 +440,10 @@ compile_assets $2 2>>/dev/null
 build_theme_config
 
 theme_name="Redmond97 $Theme_name"
-data_dir="$XDG_DATA_HOME" || '~/.local/share'
+data_dir="${XDG_DATA_HOME:-~/.local/share}"
 theme_dir="$data_dir"/themes
 rm -rf "$theme_dir"/"$theme_name"
-mkdir "$theme_dir"/"$theme_name"
+mkdir -p "$theme_dir"/"$theme_name"
 mv gtk-2.0 "$theme_dir"/"$theme_name"/
 mv gtk-3.0 "$theme_dir"/"$theme_name"/
 mv xfwm4 "$theme_dir"/"$theme_name"/
