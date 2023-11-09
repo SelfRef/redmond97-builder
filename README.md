@@ -1,5 +1,6 @@
 # This is a fork of original theme builder with Nord theme preconfigured
-Original: https://github.com/matthewmx86/Redmond97/tree/master/Extras/Theme_Builder
+Original repo: https://github.com/matthewmx86/Redmond97/tree/master/Extras/Theme_Builder
+
 Reddit post: https://www.reddit.com/r/unixporn/comments/exyl72/xfce_make_it_classic_make_it_dark/
 
 ## Preview
